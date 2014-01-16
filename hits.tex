@@ -394,8 +394,8 @@ Regarded purely up to homotopy, the interval is not really interesting:
 \end{proof}
 
 However, type-theoretically the interval does still have some interesting features, just like the topological interval in classical homotopy theory.
-For instance, it enables us to give an easy proof of function extensionality.
-(Of course, as in \autoref{sec:univalence-implies-funext}, for the duration of the following proof we suspend our overall assumption of the function extensionality axiom).
+For instance, it enables us to give an easy proof of function extensionality
+(of course, as in \autoref{sec:univalence-implies-funext}, for the duration of the following proof we suspend our overall assumption of the function extensionality axiom).
 
 \begin{lem}\label{thm:interval-funext}
   \index{function extensionality!proof from interval type}%
@@ -629,8 +629,8 @@ Our first observation about suspension is that it gives another way to define th
   so this follows easily.
 \end{proof}
 
-Topologically, the two-point space \bool is also known as the \emph{0-dimensional sphere}, $\Sn^0$.
-(For instance, it is the space of points at distance $1$ from the origin in $\mathbb{R}^1$, just as the topological 1-sphere is the space of points at distance $1$ from the origin in $\mathbb{R}^2$).
+Topologically, the two-point space \bool is also known as the \emph{0-dimensional sphere}, $\Sn^0$
+(for instance, it is the space of points at distance $1$ from the origin in $\mathbb{R}^1$, just as the topological 1-sphere is the space of points at distance $1$ from the origin in $\mathbb{R}^2$).
 Thus, \autoref{thm:suspbool} can be phrased suggestively as $\eqv{\susp\Sn^0}{\Sn^1}$.
 \index{type!n-sphere@$n$-sphere|defstyle}%
 \indexsee{n-sphere@$n$-sphere}{type, $n$-sphere}%
@@ -1095,8 +1095,8 @@ A natural induction principle for it would say that given $B:\trunc0 A \to \type
 \item a function $g:\prd{a:A} B(\tproj0a)$, and
 \item for any $x,y:\trunc0A$ with $z:B(x)$ and $w:B(y)$, and each $p,q:x=y$ with $r:\dpath{B}{p}{z}{w}$ and $s:\dpath{B}{q}{z}{w}$, a 2-path $v:\dpath{\dpath{B}{-}{z}{w}}{u(x,y,p,q)}{r}{s}$, where $u(x,y,p,q):p=q$ is obtained from the second constructor of $\trunc0A$,
 \end{itemize}
-there exists $f:\prd{x:\trunc0A} B(x)$ such that $f(\tproj0a)\jdeq g(a)$ for all $a:A$, and also $\apdtwo{f}{u(x,y,p,q)}$ is the 2-path specified above.
-(As in the propositional case, the latter condition turns out to be uninteresting).
+there exists $f:\prd{x:\trunc0A} B(x)$ such that $f(\tproj0a)\jdeq g(a)$ for all $a:A$, and also $\apdtwo{f}{u(x,y,p,q)}$ is the 2-path specified above
+(as in the propositional case, the latter condition turns out to be uninteresting).
 From this, however, we can prove a more useful induction principle.
 
 \begin{lem}\label{thm:trunc0-ind}
@@ -1128,8 +1128,8 @@ This implies the expected universal property.
 \index{limit!of sets}%
 \index{colimit!of sets}%
 For instance, this enables us to construct colimits of sets.
-We have seen that if $A \xleftarrow{f} C \xrightarrow{g} B$ is a span of sets, then the pushout $A\sqcup^C B$ may no longer be a set.
-(For instance, if $A$ and $B$ are \unit and $C$ is \bool, then the pushout is $\Sn^1$).
+We have seen that if $A \xleftarrow{f} C \xrightarrow{g} B$ is a span of sets, then the pushout $A\sqcup^C B$ may no longer be a set
+(for instance, if $A$ and $B$ are \unit and $C$ is \bool, then the pushout is $\Sn^1$).
 However, we can construct a pushout that is a set, and has the expected universal property with respect to other sets, by truncating.
 
 \begin{lem}\label{thm:set-pushout}
@@ -1721,8 +1721,8 @@ On the other hand, it can also be constructed explicitly, as the set-quotient of
 We leave the proofs to the reader.
 In the special case that $G$ is the trivial group, the last relation is unnecessary, and we obtain the \define{free product}
 \indexdef{free!product}%
-$H*K$, the coproduct in the category of groups.
-(This notation unfortunately clashes with that for the \emph{join} of types, as in \autoref{sec:colimits}, but context generally disambiguates).
+$H*K$, the coproduct in the category of groups
+(this notation unfortunately clashes with that for the \emph{join} of types, as in \autoref{sec:colimits}, but context generally disambiguates).
 
 \index{presentation!of a group}%
 Note that groups defined by \emph{presentations} can be regarded as a special case of colimits.
@@ -2051,8 +2051,8 @@ Thus, when we give a higher inductive definition, we have to specify not only th
 
 Importantly, these expressions may refer to \emph{other} constructors of $W$.
 For instance, in the definition of $\Sn^1$, the constructor $\lloop$ has both $u$ and $v$ being $\base$, the previous constructor.
-To make sense of this, we require the constructors of a higher inductive type to be specified \emph{in order}, and we allow the source and target expressions $u$ and $v$ of each constructor to refer to previous constructors, but not later ones.
-(Of course, in practice the constructors of any inductive definition are written down in some order, but for ordinary inductive types that order is irrelevant).
+To make sense of this, we require the constructors of a higher inductive type to be specified \emph{in order}, and we allow the source and target expressions $u$ and $v$ of each constructor to refer to previous constructors, but not later ones
+(of course, in practice the constructors of any inductive definition are written down in some order, but for ordinary inductive types that order is irrelevant).
 
 Note that this order is not necessarily the order of ``dimension'': in principle, a 1-dimensional path constructor could refer to a 2-dimensional one and hence need to come after it.
 However, we have not given the 0-dimensional constructors (point constructors) any way to refer to previous constructors, so they might as well all come first.
@@ -2084,8 +2084,8 @@ It seems that, just as the domain of each constructor is required to be (among o
 Making precise sense of this requirement is beyond the scope of this book, but informally it means that $u$ and $v$ must only involve operations which are preserved by all functions between types.
 
 For instance, it is permissible for $u$ and $v$ to refer to concatenation of paths, as in the case of the final constructor of the torus in \autoref{sec:cell-complexes}, since all functions in type theory preserve path concatenation (up to homotopy).
-However, it is not permissible for them to refer to an operation like the function $f$ in \autoref{eg:unnatural-hit}, which is not necessarily natural: there might be some function $g:X\to Y$ such that $f_Y \circ g \neq g\circ f_X$.
-(Univalence implies that $f_X$ must be natural with respect to all \emph{equivalences}, but not necessarily with respect to functions that are not equivalences).
+However, it is not permissible for them to refer to an operation like the function $f$ in \autoref{eg:unnatural-hit}, which is not necessarily natural: there might be some function $g:X\to Y$ such that $f_Y \circ g \neq g\circ f_X$
+(univalence implies that $f_X$ must be natural with respect to all \emph{equivalences}, but not necessarily with respect to functions that are not equivalences).
 
 The intuition of naturality supplies only a rough guide for when a higher inductive definition is permissible.
 Even if it were possible to give a precise specification of permissible forms of such definitions in this book, such a specification would probably be out of date quickly, as new extensions to the theory are constantly being explored.

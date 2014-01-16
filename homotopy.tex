@@ -338,8 +338,8 @@ and hence induces a path $\ua(\Zsuc):\Z=\Z$ in the universe \type.
 Thus, the recursion principle of $\Sn^1$ induces a map $c:\Sn^1\to\type$ by $c(\base)\defeq \Z$ and $\apfunc c (\lloop) \defid \ua(\Zsuc)$.
 Then we have $\apfunc{c} : (\base=\base) \to (\Z=\Z)$, and we can define $g(p)\defeq \transfib{X\mapsto X}{\apfunc{c}(p)}{0}$.
 
-With these definitions, we can even prove that $g(\lloop^n)=n$ for any $n:\Z$, using the induction principle \autoref{thm:sign-induction} for $n$.
-(We will prove something more general a little later on).
+With these definitions, we can even prove that $g(\lloop^n)=n$ for any $n:\Z$, using the induction principle \autoref{thm:sign-induction} for $n$
+(we will prove something more general a little later on).
 However, the other equality $\lloop^{g(p)}=p$ is significantly harder.
 The obvious thing to try is path induction, but path induction does not apply to loops such as $p:(\base=\base)$ that have \emph{both} endpoints fixed!
 A new idea is required, one which can be explained both in terms of classical homotopy theory and in terms of type theory.
@@ -396,8 +396,8 @@ This fibration is called the \emph{universal cover} of the circle.
 \index{cover!universal}%
 \index{covering space!universal}%
 
-Now a basic fact in classical homotopy theory is that a map $E_1\to E_2$ of fibrations over $B$ which is a homotopy equivalence between $E_1$ and $E_2$ induces a homotopy equivalence on all fibers.
-(We have already seen the type-theoretic version of this as well in \autoref{thm:total-fiber-equiv}).
+Now a basic fact in classical homotopy theory is that a map $E_1\to E_2$ of fibrations over $B$ which is a homotopy equivalence between $E_1$ and $E_2$ induces a homotopy equivalence on all fibers
+(we have already seen the type-theoretic version of this as well in \autoref{thm:total-fiber-equiv}).
 Since $\mathbb{R}$ and $P_{\base} S^1$ are both contractible topological spaces, they are homotopy equivalent, and thus their fibers $\Z$ and $\Omega(\Sn ^1)$ over the basepoint are also homotopy equivalent.
 
 \index{classical!homotopy theory|)}%
@@ -935,8 +935,8 @@ $n$-connected types.
 \index{fiber sequence|(}%
 \index{sequence!fiber|(}%
 
-If the codomain of a function $f:X\to Y$ is equipped with a basepoint $y_0:Y$, then we refer to the fiber $F\defeq \hfib f {y_0}$ of $f$ over $y_0$ as \define{the fiber of $f$}\index{fiber}.
-(If $Y$ is connected, then $F$ is determined up to mere equivalence; see \autoref{ex:unique-fiber}).
+If the codomain of a function $f:X\to Y$ is equipped with a basepoint $y_0:Y$, then we refer to the fiber $F\defeq \hfib f {y_0}$ of $f$ over $y_0$ as \define{the fiber of $f$}\index{fiber}
+(if $Y$ is connected, then $F$ is determined up to mere equivalence; see \autoref{ex:unique-fiber}).
 We now show that if $X$ is also pointed and $f$ preserves basepoints, then there is a relation between the homotopy groups of $F$, $X$, and $Y$ in the form of a \emph{long exact sequence}.
 We derive this by way of the \emph{fiber sequence} associated to such an $f$.
 
@@ -2073,8 +2073,8 @@ When $u\jdeq ib$ and $v\jdeq ib'$, this composite is
 \end{aligned}  
 \end{narrowmultline*}
 %
-i.e., the identity function.
-(To be precise, there is an implicit inductive argument needed here).
+i.e., the identity function
+(to be precise, there is an implicit inductive argument needed here).
 The other three point cases are analogous, and the path cases are trivial since all the types are sets.
 \end{proof}
 
@@ -2095,8 +2095,7 @@ for in that case, each $\code(u,v)$ is, by definition, a set-quotient of a \emph
 \end{eg}
 
 Since \autoref{thm:naive-van-kampen} asserts only a bijection of families of sets, this isomorphism $\pi_1(S^1)\cong \Z$ is likewise only a bijection of sets.
-We could, however, define a concatenation operation on $\code$ (by concatenating sequences) and show that $\encode$ and $\decode$ form an isomorphism respecting this structure.
-(In the language of \autoref{cha:category-theory}, these would be ``pregroupoids'').
+We could, however, define a concatenation operation on $\code$ (by concatenating sequences) and show that $\encode$ and $\decode$ form an isomorphism respecting this structure (in the language of \autoref{cha:category-theory}, these would be ``pregroupoids'').
 We leave the details to the reader.
 
 \index{fundamental!group|(}%
