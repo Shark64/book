@@ -133,9 +133,8 @@ There are also semantic and implementation issues to consider; see the Notes.
 It does seem unproblematic to make the computational rules for the \emph{point} constructors of a higher inductive type judgmental.
 In the example above, this means we have $f(\base)\jdeq b$, judgmentally.
 This choice facilitates a computational view of higher inductive types.
-Moreover, it also greatly simplifies our lives, since otherwise the second computation rule $\apfunc f (\lloop) = \ell$ would not even be well-typed as a propositional equality; we would have to compose one side or the other with the specified identification of $f(\base)$ with $b$.
-(Such problems do arise eventually, of course, when we come to talk about paths of higher dimension, but that will not be of great concern to us here.
-See also \autoref{sec:hubs-spokes}.)
+Moreover, it also greatly simplifies our lives, since otherwise the second computation rule $\apfunc f (\lloop) = \ell$ would not even be well-typed as a propositional equality; we would have to compose one side or the other with the specified identification of $f(\base)$ with $b$ (such problems do arise eventually, of course, when we come to talk about paths of higher dimension, but that will not be of great concern to us here.
+See also \autoref{sec:hubs-spokes}).
 Thus, we take the computation rules for point constructors to be judgmental, and those for paths and higher paths to be propositional.%
 \footnote{In particular, in the language of \autoref{sec:types-vs-sets}, this means that our higher inductive types are a mix of \emph{rules} (specifying how we can introduce such types and their elements, their induction principle, and their computation rules for point constructors) and \emph{axioms} (the computation rules for path constructors, which assert that certain identity types are inhabited by otherwise unspecified terms).
 We may hope that eventually, there will be a better type theory in which higher inductive types, like univalence, will be presented using only rules and no axioms.%
@@ -394,8 +393,7 @@ Regarded purely up to homotopy, the interval is not really interesting:
 \end{proof}
 
 However, type-theoretically the interval does still have some interesting features, just like the topological interval in classical homotopy theory.
-For instance, it enables us to give an easy proof of function extensionality.
-(Of course, as in \autoref{sec:univalence-implies-funext}, for the duration of the following proof we suspend our overall assumption of the function extensionality axiom.)
+For instance, it enables us to give an easy proof of function extensionality (of course, as in \autoref{sec:univalence-implies-funext}, for the duration of the following proof we suspend our overall assumption of the function extensionality axiom).
 
 \begin{lem}\label{thm:interval-funext}
   \index{function extensionality!proof from interval type}%
@@ -629,8 +627,7 @@ Our first observation about suspension is that it gives another way to define th
   so this follows easily.
 \end{proof}
 
-Topologically, the two-point space \bool is also known as the \emph{0-dimensional sphere}, $\Sn^0$.
-(For instance, it is the space of points at distance $1$ from the origin in $\mathbb{R}^1$, just as the topological 1-sphere is the space of points at distance $1$ from the origin in $\mathbb{R}^2$.)
+Topologically, the two-point space \bool is also known as the \emph{0-dimensional sphere}, $\Sn^0$ (for instance, it is the space of points at distance $1$ from the origin in $\mathbb{R}^1$, just as the topological 1-sphere is the space of points at distance $1$ from the origin in $\mathbb{R}^2$).
 Thus, \autoref{thm:suspbool} can be phrased suggestively as $\eqv{\susp\Sn^0}{\Sn^1}$.
 \index{type!n-sphere@$n$-sphere|defstyle}%
 \indexsee{n-sphere@$n$-sphere}{type, $n$-sphere}%
@@ -790,9 +787,7 @@ That is, we regard a disc\index{disc} as consisting of a cone point (or ``hub'')
 
 We can use this idea to express higher inductive types containing $n$-dimensional path-con\-struc\-tors for $n>1$ in terms of ones containing only 1-di\-men\-sion\-al path-con\-struc\-tors.
 The point is that we can obtain an $n$-dimensional path as a continuous family of 1-dimensional paths parametrized by an $(n-1)$-di\-men\-sion\-al object.
-The simplest $(n-1)$-dimensional object to use is the $(n-1)$-sphere, although in some cases a different one may be preferable.
-(Recall that we were able to define the spheres in \autoref{sec:suspension} inductively using suspensions, which involve only 1-dimensional path constructors.
-Indeed, suspension can also be regarded as an instance of this idea, since it involves a family of 1-dimensional paths parametrized by the type being suspended.)
+The simplest $(n-1)$-dimensional object to use is the $(n-1)$-sphere, although in some cases a different one may be preferable (recall that we were able to define the spheres in \autoref{sec:suspension} inductively using suspensions, which involve only 1-dimensional path constructors Indeed, suspension can also be regarded as an instance of this idea, since it involves a family of 1-dimensional paths parametrized by the type being suspended).
 
 \index{torus}
 For instance, the torus $T^2$ from the previous section could be defined instead to be generated by:
@@ -1095,8 +1090,7 @@ A natural induction principle for it would say that given $B:\trunc0 A \to \type
 \item a function $g:\prd{a:A} B(\tproj0a)$, and
 \item for any $x,y:\trunc0A$ with $z:B(x)$ and $w:B(y)$, and each $p,q:x=y$ with $r:\dpath{B}{p}{z}{w}$ and $s:\dpath{B}{q}{z}{w}$, a 2-path $v:\dpath{\dpath{B}{-}{z}{w}}{u(x,y,p,q)}{r}{s}$, where $u(x,y,p,q):p=q$ is obtained from the second constructor of $\trunc0A$,
 \end{itemize}
-there exists $f:\prd{x:\trunc0A} B(x)$ such that $f(\tproj0a)\jdeq g(a)$ for all $a:A$, and also $\apdtwo{f}{u(x,y,p,q)}$ is the 2-path specified above.
-(As in the propositional case, the latter condition turns out to be uninteresting.)
+there exists $f:\prd{x:\trunc0A} B(x)$ such that $f(\tproj0a)\jdeq g(a)$ for all $a:A$, and also $\apdtwo{f}{u(x,y,p,q)}$ is the 2-path specified above (as in the propositional case, the latter condition turns out to be uninteresting).
 From this, however, we can prove a more useful induction principle.
 
 \begin{lem}\label{thm:trunc0-ind}
@@ -1128,8 +1122,7 @@ This implies the expected universal property.
 \index{limit!of sets}%
 \index{colimit!of sets}%
 For instance, this enables us to construct colimits of sets.
-We have seen that if $A \xleftarrow{f} C \xrightarrow{g} B$ is a span of sets, then the pushout $A\sqcup^C B$ may no longer be a set.
-(For instance, if $A$ and $B$ are \unit and $C$ is \bool, then the pushout is $\Sn^1$.)
+We have seen that if $A \xleftarrow{f} C \xrightarrow{g} B$ is a span of sets, then the pushout $A\sqcup^C B$ may no longer be a set (for instance, if $A$ and $B$ are \unit and $C$ is \bool, then the pushout is $\Sn^1$).
 However, we can construct a pushout that is a set, and has the expected universal property with respect to other sets, by truncating.
 
 \begin{lem}\label{thm:set-pushout}
@@ -1192,9 +1185,9 @@ We can also describe this directly, as the higher inductive type $A/R$ generated
 \item For each $a,b:A$ such that $R(a,b)$, an equality $q(a)=q(b)$; and
 \item The $0$-truncation constructor: for all $x,y:A/R$ and $r,s:x=y$, we have $r=s$.
 \end{itemize}
-We will sometimes refer to this higher inductive type $A/R$ as the \define{set-quotient} of $A$ by $R$, to emphasize that it produces a set by definition.
-(There are more general notions of ``quotient'' in homotopy theory, but they are mostly beyond the scope of this book.
-However, in \autoref{sec:rezk} we will consider the ``quotient'' of a type by a 1-groupoid, which is the next level up from set-quotients.)
+We will sometimes refer to this higher inductive type $A/R$ as the \define{set-quotient} of $A$ by $R$, to emphasize that it produces a set by definition 
+(there are more general notions of ``quotient'' in homotopy theory, but they are mostly beyond the scope of this book.
+However, in \autoref{sec:rezk} we will consider the ``quotient'' of a type by a 1-groupoid, which is the next level up from set-quotients).
 
 \begin{rmk}
   It is not actually necessary for the definition of set-quotients, and most of their properties, that $A$ be a set.
@@ -1306,16 +1299,16 @@ In other words, a pair $(a,b)$ represents the integer $a - b$.
 In this case, however, there are \emph{canonical representatives} of the equivalence classes: those of the form $(n,0)$ or $(0,n)$.
 \end{rmk}
 
-The following lemma says that when this sort of thing happens, we don't need either general construction of quotients.
-(A function $r:A\to A$ is called \define{idempotent}
+The following lemma says that when this sort of thing happens, we don't need either general construction of quotients
+(a function $r:A\to A$ is called \define{idempotent}
 \indexdef{function!idempotent}%
 \indexdef{idempotent!function}%
-if $r\circ r = r$.)
+if $r\circ r = r$).
 
 \begin{lem}\label{lem:quotient-when-canonical-representatives}
   Suppose $\eqr$ is a relation on a set $A$, and there exists an idempotent $r
-  : A \to A$ such that $\eqv{(r(x) = r(y))}{(x \eqr y)}$ for all $x, y: A$.
-  (This implies $\eqr$ is an equivalence relation.)
+  : A \to A$ such that $\eqv{(r(x) = r(y))}{(x \eqr y)}$ for all $x, y: A$
+  (this implies $\eqr$ is an equivalence relation).
   Then the type
   %
   \begin{equation*}
@@ -1383,11 +1376,11 @@ defined by
   \end{cases}  
 \end{equation*}
 %
-(This is a valid definition even constructively, since the relation $\geq$ on $\N$ is decidable.)
+(this is a valid definition even constructively, since the relation $\geq$ on $\N$ is decidable).
 Thus a non-negative integer is canonically represented as $(k, 0)$ and a non-positive one by $(0, m)$, for $k,m:\N$.
-This division into cases implies the following ``induction principle'' for integers, which will be useful in \autoref{cha:homotopy}.
+This division into cases implies the following ``induction principle'' for integers, which will be useful in \autoref{cha:homotopy}
 \index{natural numbers}%
-(As usual, we identify a natural number $n$ with the corresponding non-negative integer, i.e.\ with the image of $(n,0):\N\times\N$ in $\Z$.)
+(as usual, we identify a natural number $n$ with the corresponding non-negative integer, i.e.\ with the image of $(n,0):\N\times\N$ in $\Z$).
 \end{rmk}
 
 \begin{lem}\label{thm:sign-induction}
@@ -1407,8 +1400,8 @@ This division into cases implies the following ``induction principle'' for integ
   \end{itemize}
 \end{lem}
 \begin{proof}
-  For purposes of this proof, let $\Z$ denote $\sm{x:\N\times\N}(r(x)=x)$, where $r$ is the above idempotent.
-  (We can then transport the result to any equivalent definition of $\Z$.)
+  For purposes of this proof, let $\Z$ denote $\sm{x:\N\times\N}(r(x)=x)$, where $r$ is the above idempotent
+  (we can then transport the result to any equivalent definition of $\Z$).
   Let $q:\N\times\N\to\Z$ be the quotient map, defined by $q(x) = (r(x),i(x))$ as in \autoref{lem:quotient-when-canonical-representatives}.
   Now define $Q\defeq P\circ q:\N\times \N \to \type$.
   By transporting the given data across appropriate equalities, we obtain
@@ -1526,8 +1519,7 @@ With our current definition, we may expect the resulting ``group theory'' to beh
   \indexsee{group!homotopy}{homotopy group}%
   of $(A,a)$ is $\pi_n(A,a)\defeq \trunc0{\Omega^n(A,a)}$.
   \index{loop space!iterated}%
-  Then $\pi_n(A,a) = \pi_1(\Omega^{n-1}(A,a))$ for $n\ge 1$, so it is also a group.
-  (When $n=0$, we have $\pi_0(A) \jdeq \trunc0 A$, which is not a group.)
+  Then $\pi_n(A,a) = \pi_1(\Omega^{n-1}(A,a))$ for $n\ge 1$, so it is also a group (when $n=0$, we have $\pi_0(A) \jdeq \trunc0 A$, which is not a group).
   Moreover, the Eckmann--Hilton argument \index{Eckmann--Hilton argument} (\autoref{thm:EckmannHilton}) implies that if $n\ge 2$, then $\pi_n(A,a)$ is an \emph{abelian}\index{group!abelian} group, i.e.\ we have $x\cdot y = y\cdot x$ for all $x,y$.
   \autoref{cha:homotopy} will be largely the study of these groups.
 \end{eg}
@@ -1662,7 +1654,7 @@ The elements of $\lst{A+A}$ are \emph{words} for the free group on $A$.
     &= i(\ell) \ct \ell\\
     &= \nil. \tag{by the inductive hypothesis}
   \end{align*}
-  (We have omitted a number of fairly evident lemmas about the behavior of concatenation of lists, etc.)
+  (We have omitted a number of fairly evident lemmas about the behavior of concatenation of lists, etc).
 
   This completes the proof that $\freegroupx{A}$ is a group.
   Now if $G$ is any group with a function $f:A\to G$, we can define $A+A\to G$ to be $f$ on the first copy of $A$ and $f$ composed with the inversion map of $G$ on the second copy.
@@ -1721,8 +1713,7 @@ On the other hand, it can also be constructed explicitly, as the set-quotient of
 We leave the proofs to the reader.
 In the special case that $G$ is the trivial group, the last relation is unnecessary, and we obtain the \define{free product}
 \indexdef{free!product}%
-$H*K$, the coproduct in the category of groups.
-(This notation unfortunately clashes with that for the \emph{join} of types, as in \autoref{sec:colimits}, but context generally disambiguates.)
+$H*K$, the coproduct in the category of groups (this notation unfortunately clashes with that for the \emph{join} of types, as in \autoref{sec:colimits}, but context generally disambiguates).
 
 \index{presentation!of a group}%
 Note that groups defined by \emph{presentations} can be regarded as a special case of colimits.
@@ -1872,8 +1863,8 @@ Now the following lemma says to define a section of a type family over $\sm{w:W}
 \begin{proof}
   Suppose given $w:W$ and $x:P(w)$; we must produce an element $k(w,x):Q(w,x)$.
   By induction on $w$, it suffices to consider two cases.
-  When $w\jdeq \cc(a)$, then we have $x:C(a)$, and so $c(a,x):Q(\cc(a),x)$ as desired.
-  (This part of the definition also ensures that the stated computational rule holds.)
+  When $w\jdeq \cc(a)$, then we have $x:C(a)$, and so $c(a,x):Q(\cc(a),x)$ as desired
+  (this part of the definition also ensures that the stated computational rule holds).
 
   Now we must show that this definition is preserved by transporting along $\pp(b)$ for any $b:B$.
   Since what we are defining, for all $w:W$, is a function of type $\prd{x:P(w)} Q(w,x)$, by \autoref{thm:dpath-forall} it suffices to show that for any $y:C(f(b))$, we have
@@ -2051,8 +2042,7 @@ Thus, when we give a higher inductive definition, we have to specify not only th
 
 Importantly, these expressions may refer to \emph{other} constructors of $W$.
 For instance, in the definition of $\Sn^1$, the constructor $\lloop$ has both $u$ and $v$ being $\base$, the previous constructor.
-To make sense of this, we require the constructors of a higher inductive type to be specified \emph{in order}, and we allow the source and target expressions $u$ and $v$ of each constructor to refer to previous constructors, but not later ones.
-(Of course, in practice the constructors of any inductive definition are written down in some order, but for ordinary inductive types that order is irrelevant.)
+To make sense of this, we require the constructors of a higher inductive type to be specified \emph{in order}, and we allow the source and target expressions $u$ and $v$ of each constructor to refer to previous constructors, but not later ones (of course, in practice the constructors of any inductive definition are written down in some order, but for ordinary inductive types that order is irrelevant).
 
 Note that this order is not necessarily the order of ``dimension'': in principle, a 1-dimensional path constructor could refer to a 2-dimensional one and hence need to come after it.
 However, we have not given the 0-dimensional constructors (point constructors) any way to refer to previous constructors, so they might as well all come first.
@@ -2084,8 +2074,7 @@ It seems that, just as the domain of each constructor is required to be (among o
 Making precise sense of this requirement is beyond the scope of this book, but informally it means that $u$ and $v$ must only involve operations which are preserved by all functions between types.
 
 For instance, it is permissible for $u$ and $v$ to refer to concatenation of paths, as in the case of the final constructor of the torus in \autoref{sec:cell-complexes}, since all functions in type theory preserve path concatenation (up to homotopy).
-However, it is not permissible for them to refer to an operation like the function $f$ in \autoref{eg:unnatural-hit}, which is not necessarily natural: there might be some function $g:X\to Y$ such that $f_Y \circ g \neq g\circ f_X$.
-(Univalence implies that $f_X$ must be natural with respect to all \emph{equivalences}, but not necessarily with respect to functions that are not equivalences.)
+However, it is not permissible for them to refer to an operation like the function $f$ in \autoref{eg:unnatural-hit}, which is not necessarily natural: there might be some function $g:X\to Y$ such that $f_Y \circ g \neq g\circ f_X$ (univalence implies that $f_X$ must be natural with respect to all \emph{equivalences}, but not necessarily with respect to functions that are not equivalences).
 
 The intuition of naturality supplies only a rough guide for when a higher inductive definition is permissible.
 Even if it were possible to give a precise specification of permissible forms of such definitions in this book, such a specification would probably be out of date quickly, as new extensions to the theory are constantly being explored.
@@ -2130,8 +2119,8 @@ course, a standard set-theoretic idea, and a well-known aspect of elementary top
 \end{ex}
 
 \begin{ex}\label{ex:torus-s1-times-s1}
-  Prove that the torus $T^2$ as defined in \autoref{sec:cell-complexes} is equivalent to $\Sn^1\times \Sn^1$.
-  (Warning: the path algebra for this is rather difficult.)
+  Prove that the torus $T^2$ as defined in \autoref{sec:cell-complexes} is equivalent to $\Sn^1\times \Sn^1$
+  (warning: the path algebra for this is rather difficult).
 \end{ex}
 
 \begin{ex}\label{ex:nspheres}
@@ -2161,8 +2150,7 @@ course, a standard set-theoretic idea, and a well-known aspect of elementary top
 \end{ex}
 
 \begin{ex}\label{ex:funext-from-interval}
-  Show that the map constructed in \autoref{thm:interval-funext} is in fact a quasi-inverse to $\happly$, so that an interval type implies the full function extensionality axiom.
-  (You may have to use \autoref{ex:strong-from-weak-funext}.)
+  Show that the map constructed in \autoref{thm:interval-funext} is in fact a quasi-inverse to $\happly$, so that an interval type implies the full function extensionality axiom (you may have to use \autoref{ex:strong-from-weak-funext}).
 \end{ex}
 
 \begin{ex}\label{ex:susp-lump}
